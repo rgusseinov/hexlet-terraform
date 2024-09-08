@@ -113,10 +113,6 @@ resource "yandex_compute_instance" "default" {
 
   provisioner "remote-exec" {
     inline = [
-      "sudo apt-get update",
-      "sudo apt-get install -y docker.io",
-      "sudo systemctl start docker",
-      "sudo systemctl enable docker",
       <<EOT
 sudo docker run -d -p 0.0.0.0:80:3000 \
   -e DB_TYPE=postgres \
@@ -127,7 +123,7 @@ sudo docker run -d -p 0.0.0.0:80:3000 \
   -e DB_PASS=${var.db_password} \
   ghcr.io/requarks/wiki:2.5
 EOT
-    ]     
+    ]    
   
   }
 
