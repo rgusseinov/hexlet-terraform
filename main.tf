@@ -133,7 +133,7 @@ resource "yandex_compute_disk" "default" {
   name     = "disk-name"
   type     = "network-ssd"
   zone     = "ru-central1-a"
-  image_id = "fd83s8u085j3mq231ago" // идентификатор образа Ubuntu
+  image_id = "fd8h9co237vlot4fli13" // идентификатор образа Ubuntu
   folder_id = "b1gb1f1uhhr23g9upvk7"
 
   labels = {
